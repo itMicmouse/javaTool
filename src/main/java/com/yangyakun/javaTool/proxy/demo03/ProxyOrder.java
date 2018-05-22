@@ -1,5 +1,8 @@
 package com.yangyakun.javaTool.proxy.demo03;
 
+/**
+ * 代理对象
+ */
 public class ProxyOrder implements IOrder {
 
     private IOrder order;
@@ -32,7 +35,22 @@ public class ProxyOrder implements IOrder {
 
     @Override
     public String getOrderPrice() {
+        if(!isChecke()){
+            return "";
+        }
+        setOrderPrice(OrderService.getOrderPriceById(getOrderId()));
         return order.getOrderPrice();
+    }
+
+    private boolean isChecke(){
+        if(name==null||name.equals("")){
+            return false;
+        }
+        if(!name.equals("亚坤")){
+            System.out.println("不满足权限");
+            return false;
+        }
+        return true;
     }
 
     @Override

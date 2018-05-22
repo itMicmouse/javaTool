@@ -49,33 +49,4 @@ public class OrderService {
 		return orderBeans;
 	}
 	
-	/**
-	 * 查询所有订单数据
-	 * 
-	 * @return
-	 * @throws Exception
-	 */
-	public static String getOrderPriceById(String id) {
-		Connection connection = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		try {
-			connection = DBUtils.getConnection();
-			String sql = " select * from t_order where t_order_id = ? ";
-			ps = connection.prepareStatement(sql);
-			ps.setString(1, id);
-			rs = ps.executeQuery();
-			if (rs.next()) {
-				return rs.getString("t_order_price");
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			DBUtils.close(connection, ps, rs);
-		}
-		return "";
-	}
-	
-	
-	
 }

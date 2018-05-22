@@ -37,8 +37,6 @@ public class OrderService {
 				OrderBean orderBean = new OrderBean();
 				orderBean.setOrderId(rs.getString("t_order_id"));
 				orderBean.setOrderName(rs.getString("t_order_name"));
-				orderBean.setOrderPrice(rs.getString("t_order_price"));
-				orderBean.setOrderUserName(rs.getString("t_order_username"));
 				orderBeans.add(new ProxyOrder(orderBean,name));
 			}
 			// 正在准备服务器上传APK，客户端下载APK，动态更新本地应用（Android插件化开发）---表情包、模块

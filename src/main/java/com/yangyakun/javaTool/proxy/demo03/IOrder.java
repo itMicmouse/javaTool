@@ -1,21 +1,21 @@
 package com.yangyakun.javaTool.proxy.demo03;
 
 public interface IOrder {
-    public String getOrderId();
+    String getOrderId();
 
-    public void setOrderId(String orderId);
+    void setOrderId(String orderId);
 
-    public String getOrderName();
+    String getOrderName();
 
-    public void setOrderName(String orderName);
+    void setOrderName(String orderName);
 
-    public String getOrderPrice();
+    String getOrderPrice();
 
-    public void setOrderPrice(String orderPrice);
+    void setOrderPrice(String orderPrice);
 
-    public String getOrderUserName();
+    String getOrderUserName();
 
-    public void setOrderUserName(String orderUserName);
+    void setOrderUserName(String orderUserName);
 
-    public String toString();
+    String toString();
 }
