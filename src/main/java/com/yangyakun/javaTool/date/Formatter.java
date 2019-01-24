@@ -1,4 +1,4 @@
-package com.yangyakun.javaTool;
+package com.yangyakun.javaTool.date;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;

@@ -1,6 +1,6 @@
 package com.yangyakun.javaTool.util;
 
-import com.yangyakun.javaTool.Formatter;
+import com.yangyakun.javaTool.date.Formatter;
 
 import java.util.Calendar;
 import java.util.Date;
