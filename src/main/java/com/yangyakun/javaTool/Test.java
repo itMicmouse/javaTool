@@ -8,6 +8,14 @@ import java.util.Date;
 public class Test {
     public static void main(String[] args) {
 
+        try {
+            System.out.println(Double.valueOf("1.0").intValue());
+            return;
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+
         for (int i = 0; i < 1001; i++) {
             if(i%10==0){
                 System.out.println("开始事务");

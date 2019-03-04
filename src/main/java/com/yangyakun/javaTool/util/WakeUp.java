@@ -26,4 +26,10 @@ public class WakeUp {
         System.out.println(standby);
     }//120181221090000
 
+    public static String writeProp1(int time) {
+    String format1 = Formatter.DATE_FORMAT13.format(time);
+    StringBuilder standby = new StringBuilder();
+        standby.append(format1);
+        return  standby.toString();
+}//120181221090000
 }
