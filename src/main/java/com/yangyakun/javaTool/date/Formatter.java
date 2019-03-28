@@ -22,4 +22,6 @@ public interface Formatter {
     SimpleDateFormat DATE_FORMAT11 = new SimpleDateFormat("yyyyMMddHHmmss", Locale.CHINA);
     SimpleDateFormat DATE_FORMAT12 = new SimpleDateFormat("yyyy-MM-dd  ahh", Locale.CHINA);
     SimpleDateFormat DATE_FORMAT13 = new SimpleDateFormat("HHmmss", Locale.CHINA);
+    SimpleDateFormat DATE_FORMATHour = new SimpleDateFormat("HH", Locale.CHINA);
+    SimpleDateFormat DATE_FORMATMinute = new SimpleDateFormat("mm", Locale.CHINA);
 }
