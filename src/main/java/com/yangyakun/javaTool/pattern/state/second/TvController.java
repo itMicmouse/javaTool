@@ -1,4 +1,4 @@
-package com.yangyakun.javaTool.pattern.state;
+package com.yangyakun.javaTool.pattern.state.second;
 
 public class TvController {
     //开机状态
