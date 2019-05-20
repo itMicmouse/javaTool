@@ -23,6 +23,21 @@ public class Client {
         lawyer.burden();
         lawyer.defend();
         lawyer.finish();
+
+        createFiel();
+    }
+
+    public static void createFiel(){
+        byte[] Proxy0s = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{XiaoMing.class});
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream("$Proxy0.class");
+            fileOutputStream.write(Proxy0s);
+            fileOutputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void createProxy(){

@@ -1,4 +1,4 @@
-package com.yangyakun.javaTool.pattern.state.pattern;
+package com.yangyakun.javaTool.pattern.state.second.pattern;
 
 public class PowerOnState implements TvState {
     @Override
