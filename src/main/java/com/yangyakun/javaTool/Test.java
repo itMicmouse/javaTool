@@ -1,6 +1,5 @@
 package com.yangyakun.javaTool;
 
-import com.yangyakun.javaTool.date.Formatter;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -8,12 +7,17 @@ import java.util.Date;
 public class Test {
     public static void main(String[] args) {
 
-        try {
-            name();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            name();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
+        String nam ="1234567";
+        System.out.println(nam.length()+nam.substring(3, 7));
+
+        char cNumber= (char) (8226);
+        System.out.println(cNumber);
 //        for (int i = 0; i < 1001; i++) {
 //            if(i%10==0){
 //                System.out.println("开始事务");

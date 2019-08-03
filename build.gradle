@@ -30,4 +30,9 @@ dependencies {
     compile group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '2.6.0'
 
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
+
+    compile 'com.squareup.okio:okio:2.2.2'
+
+    compile "org.java-websocket:Java-WebSocket:1.4.0"
+
 }
