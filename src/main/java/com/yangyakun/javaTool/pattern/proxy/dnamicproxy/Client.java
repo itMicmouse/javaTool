@@ -13,24 +13,23 @@ public class Client {
     public static void main(String[] args) {
         ILawsuit xiaoMing = new XiaoMing();
 
-        DynamicProxy proxy = new DynamicProxy(xiaoMing);
-
-        ClassLoader classLoader = xiaoMing.getClass().getClassLoader();
-
-        ILawsuit lawyer = (ILawsuit) Proxy.newProxyInstance(classLoader, new Class[]{ILawsuit.class}, proxy);
+        ILawsuit lawyer = (ILawsuit) Proxy.newProxyInstance(XiaoMing.class.getClassLoader(),
+                new Class[]{ILawsuit.class},
+                new DynamicProxy(xiaoMing));
+        System.out.println(lawyer.getClass().getName());
         createProxy();
+        createFiel();
         lawyer.submit();
         lawyer.burden();
         lawyer.defend();
         lawyer.finish();
 
-        createFiel();
     }
 
-    public static void createFiel(){
+    public static void createFiel() {
         byte[] Proxy0s = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{XiaoMing.class});
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("$Proxy0.class");
+            FileOutputStream fileOutputStream = new FileOutputStream("XiaoMing_$Proxy0.class");
             fileOutputStream.write(Proxy0s);
             fileOutputStream.close();
         } catch (FileNotFoundException e) {
@@ -40,11 +39,11 @@ public class Client {
         }
     }
 
-    public static void createProxy(){
+    public static void createProxy() {
         byte[] bytes = ProxyGenerator.generateProxyClass("$porxy0", new Class<?>[]{ILawsuit.class});
 
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("$porxy0.class");
+            FileOutputStream fileOutputStream = new FileOutputStream("ILawsuit_$Porxy0.class");
             fileOutputStream.write(bytes);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -16,6 +16,6 @@ public class DynamicProxy implements InvocationHandler {
         System.out.println("----------------before------------------");
         Object invoke = method.invoke(object, args);
         System.out.println("----------------after------------------");
-        return null;
+        return invoke;
     }
 }
